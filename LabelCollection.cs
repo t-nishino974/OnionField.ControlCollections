@@ -9,7 +9,7 @@ using System.Windows.Forms;
 namespace OnionField.ControlCollections
 {
     /// <summary>
-    /// <inheritdoc/>
+    /// Windows フォームデザイナーでインデックスを割り当て可能な<see cref="Label"/>のコレクションを提供します。
     /// </summary>
     [ProvideProperty("Index", typeof(Label))]
     public class LabelCollection : BaseControlCollection<Label>
