@@ -10,6 +10,11 @@
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <RepositoryUrl>https://github.com/t-nishino974/OnionField.ControlCollections</RepositoryUrl>
+    <PackageTags>winforms</PackageTags>
+    <Authors>t-nishino974</Authors>
+    <Copyright>Copyright © t-nishino974 2025</Copyright>
+    <Description>VB6のコントロール配列のような機能を実装するための基本クラスといくつかのコントロールに対する実装を提供します。</Description>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
@@ -21,6 +26,6 @@
     <EditorConfigFiles Remove="C:\Users\sq101\source\repos\CustomControl\CustomControlLibrary\.editorconfig" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="README.md" Pack="true" PackagePath=""/>
+    <None Include="README.md" Pack="true" PackagePath="" />
   </ItemGroup>
 </Project>
