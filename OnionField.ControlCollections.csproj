@@ -18,15 +18,6 @@
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
-  </ItemGroup>
-  <ItemGroup>
-    <EditorConfigFiles Remove="C:\Users\sq101\source\repos\CustomControl\CustomControlLibrary\.editorconfig" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="README.md" Pack="true" PackagePath="" />
   </ItemGroup>
 </Project>
