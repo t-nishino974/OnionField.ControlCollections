@@ -9,3 +9,11 @@ public class CheckBoxCollection : BaseControlCollection<CheckBox>
 }
 ```
 このように`BaseControlCollection<T>`を継承すれば、任意のオブジェクトに Index プロパティを追加できます。
+
+## クラス
+このライブラリには下記のクラスが含まれます。
+- `BaseControlCollection`
+- `CheckBoxCollection`
+- `LabelCollection`
+- `RadioButtonCollection`
+- `TextBoxCollection`

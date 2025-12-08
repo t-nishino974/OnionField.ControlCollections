@@ -15,6 +15,7 @@
     <Authors>t-nishino974</Authors>
     <Copyright>Copyright © t-nishino974 2025</Copyright>
     <Description>VB6のコントロール配列のような機能を実装するための基本クラスといくつかのコントロールに対する実装を提供します。</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
