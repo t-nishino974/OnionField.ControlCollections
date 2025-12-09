@@ -24,7 +24,7 @@ namespace OnionField.ControlCollections
     /// public class {適応対象のコントロール}Collection : BaseControlCollection{適応対象のコントロール}
     /// </code>
     /// </example>
-    public partial class BaseControlCollection<T> : Component, IExtenderProvider, IEnumerable<T>
+    public partial class BaseControlCollection<T> : Component, IExtenderProvider, IReadOnlyCollection<T>
     {
         /// <summary>
         /// オブジェクトとインデックスを関連付けるための内部辞書。
@@ -57,14 +57,13 @@ namespace OnionField.ControlCollections
         /// <returns>指定したインデックスに関連付けられているオブジェクト。</returns>
         public T this[int index] => this.inner.First(o => o.Value == index).Key;
 
-        /// <inheritdoc/>
+        int IReadOnlyCollection<T>.Count => this.inner.Count;
+
         bool IExtenderProvider.CanExtend(object extendee) => extendee is T;
 
-        /// <inheritdoc/>
         IEnumerator IEnumerable.GetEnumerator() => this.inner.Select(o => o.Key).GetEnumerator();
 
-        /// <inheritdoc/>
-        public IEnumerator<T> GetEnumerator() => this.inner.Select(o => o.Key).GetEnumerator();
+        IEnumerator<T> IEnumerable<T>.GetEnumerator() => this.inner.Select(o => o.Key).GetEnumerator();
 
         /// <summary>
         /// 指定したオブジェクトに関連付けられているインデックスを取得します。
