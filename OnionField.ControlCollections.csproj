@@ -6,7 +6,7 @@
     <Nullable>disable</Nullable>
     <ImplicitUsings>disable</ImplicitUsings>
     <Product>OnionField.ControlCollections</Product>
-    <Version>1.0.0.1</Version>
+    <Version>1.0.0.2</Version>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
@@ -16,7 +16,7 @@
     <Copyright>Copyright © t-nishino974 2025</Copyright>
     <Description>VB6のコントロール配列のような機能を実装するための基本クラスといくつかのコントロールに対する実装を提供します。</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageReleaseNotes>BaseControlCollection&lt;T&gt;にIReadOnlyCollection&lt;T&gt;を実装しました。</PackageReleaseNotes>
+    <PackageReleaseNotes>IReadOnlyCollection&lt;T&gt;インターフェースのCountプロパティを明示的な実装から暗黙的な実装に変更しました。</PackageReleaseNotes>
   </PropertyGroup>
   <ItemGroup>
     <None Include="README.md" Pack="true" PackagePath="" />

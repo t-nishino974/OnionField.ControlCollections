@@ -57,7 +57,10 @@ namespace OnionField.ControlCollections
         /// <returns>指定したインデックスに関連付けられているオブジェクト。</returns>
         public T this[int index] => this.inner.First(o => o.Value == index).Key;
 
-        int IReadOnlyCollection<T>.Count => this.inner.Count;
+        /// <summary>
+        /// <see cref="BaseControlCollection{T}"/>に格納されている要素の数を取得します。
+        /// </summary>
+        public int Count => this.inner.Count;
 
         bool IExtenderProvider.CanExtend(object extendee) => extendee is T;
 
@@ -75,9 +78,9 @@ namespace OnionField.ControlCollections
         [Description("コントロールと関連付けられたキーとなる数値を取得します。")]
         public int GetIndex(T control)
         {
-            if (this.inner.ContainsKey(control))
+            if(this.inner.TryGetValue(control, out var index))
             {
-                return this.inner[control];
+                return index;
             }
             else
             {
@@ -94,10 +97,7 @@ namespace OnionField.ControlCollections
         {
             if (index < 0)
             {
-                if (this.inner.ContainsKey(control))
-                {
-                    this.inner.Remove(control);
-                }
+                _ = this.inner.Remove(control);
             }
             else if (this.GetIndex(control) != index)
             {
